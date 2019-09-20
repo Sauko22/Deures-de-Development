@@ -57,11 +57,14 @@ public:
 
 	}
 
-	float operador(vec3<T> v2) {
-		float  sol;
+	vec3<float> operator+(vec3<T> v2) {
+		vec3 aux;
 		
-		sol = (x + v2.x) + (y + v2.y) + (z + v2.z);
-		return sol;
+		aux.x = x + v2.x;
+		aux.y = y + v2.y;
+		aux.z = z + v2.z;
+
+		return aux;
 
 	}
 	//constructor buit
