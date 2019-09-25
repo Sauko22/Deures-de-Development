@@ -60,19 +60,19 @@ bool j1App::Awake()
 	// TODO 3: Load config.xml file using load_file() method from the xml_document class.
 	// If everything goes well, load the top tag inside the xml_node property
 	// created in the last TODO
-
 	pugi::xml_parse_result result = doc.load_file("config.xml");
-	if (result)
-	{
-		std::cout << "XML   config.xml  parsed without errors, attr value: [" << doc.child("node").attribute("attr").value() << "]\n\n";
-	}
-	else
-	{
-		std::cout << "XML [" << config.xml << "] parsed with errors, attr value: [" << doc.child("node").attribute("attr").value() << "]\n";
-		std::cout << "Error description: " << result.description() << "\n";
-		std::cout << "Error offset: " << result.offset << " (error at [..." << (config.xml + result.offset) << "]\n\n";
-	}
 	bool ret = true;
+
+	
+	if(result){
+		LOG("doc loaded %s", result.description());
+	}
+	else {
+		LOG("failed to load config.xml %s", result.description());
+		bool ret = false;
+	}
+
+	
 
 	p2List_item<j1Module*>* item;
 	item = modules.start;
@@ -90,7 +90,7 @@ bool j1App::Awake()
 	 
 	// TODO 4: Read the title from the config file
 	// and set the window title using win->SetTitle()
-
+	win->SetTitle("config.xml");
 	return ret;
 }
 

@@ -1,2 +1,0 @@
-# Deures-de-Development
-deures

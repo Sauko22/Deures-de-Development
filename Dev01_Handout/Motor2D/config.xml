@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!-- Config file for the game -->
 <config>
-  <title>Handout 1 with XML</title>
+  <title>My super awesome game with XML</title>
 </config>
