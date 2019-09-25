@@ -1,0 +1,11 @@
+﻿  j1Main.cpp
+  j1App.cpp
+  j1Audio.cpp
+  j1Input.cpp
+  j1Scene.cpp
+  j1Render.cpp
+  j1Textures.cpp
+  j1Window.cpp
+  Generating Code...
+  C:\Users\poljs\Desktop\Dev02_Handout\Motor2D\j1App.cpp(185) : error C4716: 'j1App::save': must return a value
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(429,5): error MSB6006: "CL.exe" exited with code 2.
